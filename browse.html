@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Netflix Clone - Watch TV Shows Online, Watch Movies Online">
+  <title>Home - Netflix</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E50914'><path d='M4.5 1h4l5.5 15.5L14 1h5.5v22h-4L10 7.5 10 23H4.5z'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/browse.css">
+</head>
+<body>
+
+  <nav class="browse-navbar" id="browse-navbar" aria-label="Main Navigation">
+    <div class="nav-left">
+      <button class="mobile-menu-toggle" id="mobile-nav-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="browse.html" class="logo-text" aria-label="Netflix Home">NETFLIX</a>
+
+      <ul class="nav-primary-links" id="nav-primary-links">
+        <li><a href="#" class="nav-link active" data-nav-filter="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-nav-filter="tv">TV Shows</a></li>
+        <li><a href="#" class="nav-link" data-nav-filter="movie">Movies</a></li>
+        <li><a href="#" class="nav-link" data-nav-filter="trending">New & Popular</a></li>
+        <li><a href="#" class="nav-link" data-nav-filter="mylist">My List</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-search-box" id="nav-search-box">
+        <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <input 
+          type="text" 
+          class="nav-search-input" 
+          id="nav-search-input" 
+          placeholder="Titles, people, genres" 
+          autocomplete="off"
+        >
+        <button class="nav-search-clear" id="nav-search-clear" aria-label="Clear search" style="display: none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="nav-bell-wrapper">
+        <button class="btn-icon btn-icon-sm" id="nav-bell-btn" aria-label="Notifications" title="Notifications">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+        </button>
+
+        <div class="nav-notifications-dropdown" id="nav-notifications-dropdown">
+          <div class="notif-item">
+            <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=100&q=80" alt="Stranger Things" class="notif-thumb">
+            <div class="notif-text">
+              <h5>New Season Available</h5>
+              <span>Stranger Things Season 4 is now streaming.</span>
+            </div>
+          </div>
+          <div class="notif-item">
+            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=100&q=80" alt="Cyberpunk" class="notif-thumb">
+            <div class="notif-text">
+              <h5>Trending This Week</h5>
+              <span>Cyberpunk: Edgerunners is #1 today.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-avatar-wrap" title="User Profile">
+        <img 
+          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" 
+          alt="User Profile" 
+          class="profile-avatar-img"
+        >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-banner" id="hero-banner">
+    <div class="hero-backdrop-container">
+      <img id="hero-backdrop-img" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80" alt="" class="hero-backdrop-img">
+      <div class="hero-vignette-overlay"></div>
+      <div class="hero-bottom-fade-overlay"></div>
+    </div>
+
+    <div class="hero-info-wrapper">
+      <div class="hero-brand-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E50914">
+          <path d="M4.5 1h4l5.5 15.5L14 1h5.5v22h-4L10 7.5 10 23H4.5z"/>
+        </svg>
+        <span>SERIES</span>
+      </div>
+
+      <h1 class="hero-title" id="hero-title">Stranger Things</h1>
+      <p class="hero-description" id="hero-description"></p>
+
+      <div class="hero-buttons-row">
+        <button class="btn btn-white" id="hero-play-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>Play</span>
+        </button>
+
+        <button class="btn btn-secondary" id="hero-info-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span>More Info</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-right-meta">
+      <button class="btn-icon" id="hero-sound-btn" title="Toggle audio">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+      </button>
+      <div class="hero-maturity-badge" id="hero-maturity">16+</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-results-section" id="search-results-section" style="display: none;">
+      <h2 class="search-results-title" id="search-results-title">Search Results</h2>
+      <div class="search-results-grid" id="search-results-grid"></div>
+    </section>
+
+    <main class="browse-main-rows" id="browse-main-rows">
+    </main>
+  </main>
+
+
+
+  <div id="toast-container"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/mylist.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/browse.js"></script>
+</body>
+</html>

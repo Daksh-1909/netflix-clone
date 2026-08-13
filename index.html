@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Netflix Clone - Unlimited movies, TV shows, and more. Watch anywhere. Cancel anytime.">
+  <title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E50914'><path d='M4.5 1h4l5.5 15.5L14 1h5.5v22h-4L10 7.5 10 23H4.5z'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+  <header class="landing-hero" id="top">
+    <nav class="landing-nav" aria-label="Main Navigation">
+      <a href="index.html" class="logo-text" aria-label="Netflix Home">NETFLIX</a>
+      
+      <div class="nav-actions">
+        <div class="lang-select-wrapper">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <select class="lang-select" aria-label="Language Selector">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+        <a href="browse.html" class="btn btn-primary" id="landing-signin-btn">Sign In</a>
+      </div>
+    </nav>
+
+    <div class="hero-content-wrapper">
+      <div class="hero-card">
+        <h1 class="hero-title">Unlimited movies, TV shows, and more</h1>
+        <p class="hero-subtitle">Watch anywhere. Cancel anytime.</p>
+        <p class="hero-cta-label">Ready to watch? Enter your email to create or restart your membership.</p>
+        
+        <form class="cta-form" id="hero-cta-form" novalidate>
+          <div class="input-floating-group">
+            <input 
+              type="email" 
+              class="input-floating" 
+              id="hero-email-input" 
+              placeholder=" " 
+              required
+              autocomplete="email"
+            >
+            <label for="hero-email-input" class="input-label">Email address</label>
+            <div class="form-error-msg" id="hero-email-error">Please enter a valid email address.</div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="hero-get-started-btn">
+            Get Started
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <section class="feature-section" aria-labelledby="feature-tv-title">
+    <div class="feature-container">
+      <div class="feature-text">
+        <h2 class="feature-title" id="feature-tv-title">Enjoy on your TV</h2>
+        <p class="feature-description">Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+      </div>
+      <div class="feature-media">
+        <div class="feature-img-wrapper">
+          <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="Smart TV frame" onerror="this.src='https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=600&q=80'">
+        </div>
+        <div class="feature-video-wrapper">
+          <video autoplay playsinline muted loop>
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section" aria-labelledby="feature-download-title">
+    <div class="feature-container reverse">
+      <div class="feature-text">
+        <h2 class="feature-title" id="feature-download-title">Download your shows to watch offline</h2>
+        <p class="feature-description">Save your favorites easily and always have something to watch on road trips or flights.</p>
+      </div>
+      <div class="feature-media">
+        <div class="feature-img-wrapper">
+          <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.png" alt="Mobile device" onerror="this.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80'">
+        </div>
+        <div class="feature-media-card">
+          <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=150&q=80" alt="Stranger Things poster" class="feature-media-card-img">
+          <div class="feature-media-card-info">
+            <div class="feature-media-card-title">Stranger Things</div>
+            <div class="feature-media-card-status">Downloading...</div>
+          </div>
+          <svg class="download-gif-icon" viewBox="0 0 24 24" fill="none" stroke="#0071eb" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section" aria-labelledby="feature-everywhere-title">
+    <div class="feature-container">
+      <div class="feature-text">
+        <h2 class="feature-title" id="feature-everywhere-title">Watch everywhere</h2>
+        <p class="feature-description">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+      </div>
+      <div class="feature-media">
+        <div class="feature-img-wrapper">
+          <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="Multiple Devices" onerror="this.src='https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=600&q=80'">
+        </div>
+        <div class="feature-video-wrapper" style="width: 63%; top: 34%;">
+          <video autoplay playsinline muted loop>
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section" aria-labelledby="feature-kids-title">
+    <div class="feature-container reverse">
+      <div class="feature-text">
+        <h2 class="feature-title" id="feature-kids-title">Create profiles for kids</h2>
+        <p class="feature-description">Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
+      </div>
+      <div class="feature-media">
+        <div class="feature-img-wrapper">
+          <img src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABejKYujIIDQjvwgG65mlfhYgca1xrx5MMFE4asjM8IvWKEetURvSTvACMwDQD6KWwFJIMbBQL66EdGXYznJkg42PjhYDOFQXYBTL.png?r=6a6" alt="Netflix Kids Profile" onerror="this.src='https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" aria-labelledby="faq-main-title">
+    <h2 class="faq-title" id="faq-main-title">Frequently Asked Questions</h2>
+    
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>What is Netflix?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>How much does Netflix cost?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $6.99 to $22.99 a month. No extra costs, no contracts.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>Where can I watch?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>How do I cancel?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>What can I watch on Netflix?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>Is Netflix good for kids?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space. Kids profiles come with PIN-protected parental controls.
+        </div>
+      </div>
+    </div>
+
+    <p class="hero-cta-label">Ready to watch? Enter your email to create or restart your membership.</p>
+    <form class="cta-form" id="bottom-cta-form" novalidate>
+      <div class="input-floating-group">
+        <input 
+          type="email" 
+          class="input-floating" 
+          id="bottom-email-input" 
+          placeholder=" " 
+          required
+          autocomplete="email"
+        >
+        <label for="bottom-email-input" class="input-label">Email address</label>
+        <div class="form-error-msg" id="bottom-email-error">Please enter a valid email address.</div>
+      </div>
+      <button type="submit" class="btn btn-primary" id="bottom-get-started-btn">
+        Get Started
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </form>
+  </section>
+
+
+
+  <div id="toast-container"></div>
+
+  <script src="js/landing.js"></script>
+</body>
+</html>
